@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    font-family: monospace;    
+}
+
+h1{
+    color: #20fc03;
+}
+
+.layout{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 40px;
+    width: 200px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-inline: 20px;
+    padding-inline: 20px;
+}
+
+.jogador1 {
+    color: aqua;
+    margin-block: 20px;
+}
+
+.jogador2 {
+    color: red;
+    margin-block: 20px;
+}
+
+#cenario {
+    /* display: flex;
+    height: 600px;
+    width: 1000px;
+    background-color: black;
+    margin-block: 20px;
+    justify-content: space-between;
+    align-items: center; */
+    border: 2px solid #c1c1c1;
+}
+
+#barra1 {
+    /* height: 70px;
+    width: 10px;
+    background-color: #c1c1c1;
+    left: 20px; */
+    position: absolute;
+}
+
+#bola {
+    /* height: 16px;
+    width: 16px;
+    background-color: #20fc03;
+    border-radius: 50%;
+    margin: 50px; */
+    position: absolute;
+}
+
+#barra2 {
+    /* height: 70px;
+    width: 10px;
+    background-color: #c1c1c1;
+    right: 20px; */
+    position: absolute;
+}
+
+button {
+    background-color: transparent;
+    color: #20fc03;
+    border-color: #20fc03;
+    border-radius: 7px;
+    font-family: monospace;
+    font-size: 24px;
+    padding-inline: 20px;
+    padding-block: 5px;
+    margin-block: 10px;
+}
