@@ -32,14 +32,24 @@ input {
 }
 
 .jogador1 {
-    color: aqua;
-    margin-block: 20px;
+    color: blue;
+    /* margin-inline: 10px; */
+    margin-inline: 30px;
+    font-size: 30px;
 }
 
 .jogador2 {
     color: red;
-    margin-block: 20px;
+    /* margin-inline: 10px; */
+    margin-inline: 50px;
+    font-size: 30px;
 }
+
+/* h2{
+    color: #20fc03;
+    margin-inline: 50px;
+    font-size: 50px;
+} */
 
 #cenario {
     /* display: flex;
