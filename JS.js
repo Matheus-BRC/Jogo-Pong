@@ -20,43 +20,31 @@ class Bola {
   }
 
   continuarMovimento() {
-    
-  if(this.direcao === 0){
-    if(this.y <= this.alturaTotal - this.alturaBola - this.velocidadeHor && this.y >= this.velocidadeHor){
+    if(this.x <= this.larguraTotal - this.larguraBola - this.velocidadeVer && this.x >= this.velocidadeVer){
     this.x += this.velocidadeHor;
     this.element.style.marginLeft = this.x + 'px';
-    
+    }
+    else {
+      this.inverterDirecaoHor();
+    }
+    if(this.y <= this.alturaTotal - this.alturaBola - this.velocidadeHor && this.y >= this.velocidadeHor){
     this.y += this.velocidadeVer;
     this.element.style.marginTop = this.y + 'px';
     }
-    else{
+    else {
       this.inverterDirecaoVer();
-      // this.inverterDirecaoHor();
-    }
-  }
-
-  else{
-    if(this.x <= this.larguraTotal - this.larguraBola - this.velocidadeVer && this.x >= this.velocidadeVer){
-      this.x += this.velocidadeHor;
-      this.element.style.marginLeft = this.x + 'px';
-      
-      this.y += this.velocidadeVer;
-      this.element.style.marginTop = this.y + 'px';
-      }
-      else{
-        // this.inverterDirecaoVer();
-        this.inverterDirecaoHor();
-      }
     }
   }
 
   inverterDirecaoHor() {
     this.velocidadeHor *= -1;
-    this.direcao = 0;
+    this.x += this.velocidadeHor;
+    this.element.style.marginLeft = this.x + 'px';
   }
   inverterDirecaoVer() {
     this.velocidadeVer *= -1;
-    this.direcao = 1;
+    this.y += this.velocidadeVer;
+    this.element.style.marginTop = this.y + 'px';
   }
   x1() {
     return this.x - this.raio;
@@ -207,7 +195,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function update() {
+    if(DIRECAO === 0){
     cenario.bola.continuarMovimento();
+    }
     // cenario.detectarColisao()
     requestAnimationFrame(update);
   }
