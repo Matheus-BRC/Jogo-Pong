@@ -16,6 +16,7 @@ h1{
     position: relative;
     justify-content: center;
     align-items: center;
+    margin-block: 20px;
 }
 
 input {
@@ -48,7 +49,7 @@ input {
     margin-block: 20px;
     justify-content: space-between;
     align-items: center; */
-    border: 2px solid #c1c1c1;
+    border: 10px solid #c1c1c1;
 }
 
 #barra1 {
